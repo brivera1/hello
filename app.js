@@ -6,6 +6,7 @@ app.get('/', function(request, response){
     response.sendfile('index.html');
 });
 
-app.listen(port, function(){
-  console.log('Node js Express js Tutorial');
-});
+var server = app.listen(process.env.PORT || 5000, function () {
+    var port = server.address().port;
+    console.log("Express is working on port " + port);
+  });
