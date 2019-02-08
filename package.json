@@ -17,8 +17,6 @@
   },
   "homepage": "",
   "dependencies": {
-    "audio-loader": "^1.0.3",
-    "audio-play": "^2.2.1",
     "express": "^4.16.4",
     "play-sound": "^1.1.3"
   }
