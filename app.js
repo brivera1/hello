@@ -1,10 +1,11 @@
-const http = require('http');
+const express = require('express');
+const app = new express();
 const port=process.env.PORT || 3000
-const server = http.createServer((req, res) => {
-res.statusCode = 200;
-res.setHeader('Content-Type', 'text/html');
-res.end('<h1>Hello World</h1>');
+
+app.get('/', function(request, response){
+    response.sendfile('index.html');
 });
-server.listen(port,() => {
-console.log(`Server running at port `+port);
-});
+
+app.listen(port, function(){
+    console.log('Node js Express js Tutorial');
+  });
