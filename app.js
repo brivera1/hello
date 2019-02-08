@@ -1,9 +1,14 @@
 const express = require('express');
 const app = new express();
-const port=process.env.PORT || 3000
 
 app.get('/', function(request, response){
     response.sendfile('index.html');
+    var player = require('play-sound')(opts = {})
+
+ player.play('./song.mp3', function (err) {
+   if (err) throw err;
+   console.log("Audio finished");
+ });
 });
 
 var server = app.listen(process.env.PORT || 5000, function () {
